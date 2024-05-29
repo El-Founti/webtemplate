@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
+  <!-- https://www.freewebtoolkit.com/how-to-display-code-snippets-in-html-with-color -->
+  <title>Gecombineerde sitenavigatie</title>
+</head>
+
+<body>
+  <nav>
+    <div class="topnav">
+      <a href="javascript:void(0);" class="icon">&#9776;</a>
+      <a href="index.html" class="active">Start</a>
+      <a href=#>HTML</a>
+      <a href=#>CSS</a>
+      <a href=#>JS</a>
+    </div>
+
+    <button class="btn">&#9776;</button>
+
+    <div class="sidenav">
+      <a href="topnavigatie.html" class="active">Les 1: Topnavigatie</a>
+      <a href="off-Canvas.html">Les 2: Off-canvas menu</a>
+      <a href="gecombineerde-sitenavigatie.html">Les 3: Gecombineerde sitenavigatie</a>
+      <a href="javascript:void(0)" class="closebtn">&times;</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Lesonderdeel 3: Gecombineerde sitenavigatie</h1>
+  </header>
+  <main>
+    <article>
+      <section>
+        <h2>Off-Canvas menu</h2>
+        <div class="text">
+          <p>In de vorige twee lesonderdelen hebben we de topnavigatie en het off-canvas menu bekeken. Hierbij werd nog
+            geen rekening gehouden met het combineren van deze menutypes. In dit lesonderdeel gaan we bekijken hoe we
+            deze twee menutypes kunnen combineren zodoende we de gebruikservaring kunnen optimaliseren. In de
+            codesnippet van de html code vinden we alvast de mark up voor de opstelling. In deze worden beide menu's in
+            het bodyelement onder de nav tag geplaatst. Bijkomend voegen we nog een header tag en een main tag eronder.
+          </p>
+        </div>
+        <div class="container">
+          <div class="language">HTML</div>
+          <img src="img/sideNavButton.jpg" alt="Mark up van de topnavigatie en off-canvas menu gecombineerd">
+          <div class="code-wrapper">
+            <pre><code tabindex="-1" id="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;nl&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+    &lt;title&gt;Gecombineerde sitenavigatie&lt;/title&gt;    
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;nav&gt;
+        &lt;div class=&quot;topnav&quot; id=&quot;myTopnav&quot;&gt;
+            &lt;a href=&quot;javascript:void(0);&quot; class=&quot;icon&quot; onclick=&quot;topnav()&quot;&gt;&amp;#9776;&lt;/a&gt;
+            &lt;a href=&quot;index.html&quot; class=&quot;active&quot;&gt;Start&lt;/a&gt;
+            &lt;a href=&quot;#&quot;&gt;HTML&lt;/a&gt;
+            &lt;a href=&quot;#&quot;&gt;CSS&lt;/a&gt;
+            &lt;a href=&quot;#&quot;&gt;JS&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;button class=&quot;btn&quot; onclick=&quot;sidenav()&quot;&gt;&amp;#9776;&lt;/button&gt;
+        &lt;div id=&quot;mySidenav1&quot; class=&quot;sidenav&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;active&quot;&gt;Les 1: Topnavigatie&lt;/a&gt;
+            &lt;a href=&quot;#&quot;&gt;Les 2: Off-canvas menu&lt;/a&gt;
+            &lt;a href=&quot;gecombineerde sitenavigatie.html&quot; class=&quot;active&quot;&gt;Les 3: Gecombineerde sitenavigatie&lt;/a&gt;
+            &lt;a href=&quot;javascript:void(0)&quot; class=&quot;closebtn&quot; onclick=&quot;sidenav()&quot;&gt;&amp;times;&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Lesonderdeel 3: Gecombineerde sitenavigatie&lt;/h1&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+        &lt;h2&gt;Gecombineerde sitenavigatie&lt;/h2&gt;
+    &lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+            <button>Copy</button>
+            <span class="copy-success">Code copied!</span>
+            <span class="copy-focus">Html code</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Opmaak</h2>
+        <div class="text">
+          <p>In het eerste en het tweede lesonderdeel hadden we de al reeds de opmaak van beide menu's besproken. In dit
+            lesonderdeel voegen nog de opmaak toe aan het body element, het header element en het main element. Indien
+            we de code in deze code in onze editor invoeren, merken we echter dat beide menu's mekaar overlappen bij het
+            bedienen ervan op schermen die kleiner zijn dan 600px . Ook wordt de webcontent bedekt bij het bedienen van
+            het off-canvas menu. Dit zorgt voor verwarring bij de gebruiker. Dit gaan we verder in JS oplossen.
+          </p>
+        </div>
+        <div class="container">
+          <div class="language">CSS</div>
+          <div class="code-wrapper">
+            <pre><code tabindex="-1" id="language-css">
+html {
+  font-size: clamp(.8rem, 1.4vw, 2.4rem);
+  line-height: 1.6;  
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* topnav */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+                              
+.topnav a {
+  color: white;
+  text-decoration: none;
+  padding: .6em;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: #333;
+}
+                              
+.topnav a.active {
+  background-color: #ddd;
+  color: #333;
+}
+                              
+.topnav a:not(:first-child, :nth-child(2)) {
+  display: none;
+}
+                              
+.topnav a:first-child {
+  float: right;
+  display: block;
+}
+
+.topnav a:nth-child(2) {
+  display: inline-block; 
+} 
+
+.topnavresponsive a:not(:first-child,:nth-child(2)) {
+  display: block;  
+}
+                                                            
+@media screen and (min-width: 600px) {
+  .topnav a:not(:first-child) {
+    display: block;
+    float: left;   
+  }
+                              
+  .topnav a:first-child {
+    display: none;
+  }                              
+}
+
+/* Sidenav */
+.sidenav a {
+  display: block;
+  text-decoration: none;
+  padding: .2em .5em;
+  color: #818181; 
+}
+
+.sidenav a:hover {
+  background-color: #ddd;
+  color: #333; 
+}
+
+.sidenav a.active {
+  background-color: #ddd;
+  color: #333;
+}
+
+.sidenav a:first-child {
+  margin-top: 3.5em;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: clamp(2rem, 1vw, 2.4rem);
+  border: 1px solid #333;
+  padding: 0 .5em;
+}
+
+.sidenav {
+  height: 100%; 
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  transition: 0.6s;
+  overflow-x: hidden;
+  visibility: hidden;  
+}
+
+.sidenavOpen {
+  width: clamp(200px, 20%, 600px); 
+  transition: 0.6s;
+  visibility: visible;
+}
+
+.btn:focus {
+  border: 2px solid #ddd;
+}
+
+.btn:hover {
+  border: 2px solid #ddd;
+}
+
+.btn {
+  background-color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 5px;
+  font-size: clamp(2rem, 1vw, 2.4rem);
+}
+
+header,main{
+  transition: margin-left .6s;  
+}
+.header,.main{
+  margin-left: clamp(200px, 20%, 600px);  
+}
+h1{
+  margin-left: .5em;
+  word-break: keep-all;  
+}
+</code></pre>
+            <button>Copy</button>
+            <span class="copy-success">Code copied!</span>
+            <span class="copy-focus">CSS code</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Functionaliteit</h2>
+        <div class="text">
+            <p>In de codesnippet is de code die we tijdens de vorige lesonderdelen hebben opgemaakt als commentaar is
+            aangegeven. Dus deze wordt niet meer beschouwd als een coderegel. Daaronder bevindt zich de aangepaste code.
+            Deze code verhinderd dus dat beide menu' mekaar overlappen bij schermen onder de 600px. Om na te gaan hoe
+            deze code werkt gaan we terug naar de console van de developpers tool. We openen de console en zorgen dat
+            het off-canvas menu dichtgeklapt is. We weten uit vorige les dat het off-Canvas menu in open toestand een
+            bijkomende classname draagt nl.<code>(".sidenavOpen")</code>.</p>
+            <p> Om na te gaan op welke eigenschappen van het off-Canvas menu we ons moeten richten controleren we dat het
+            off-canvas menu dichtgeklapt is en voeren <code>document.querySelector(".sidenavOpen")</code> in de console.
+            Merk dat de console de waarde <cite>null</cite> retourneert. M.a.w. het element is op dit ogenblik
+            onbestaand aangezien we deze selector pas toekennen wanneer we op de bedieningsknop van het menu klikken.</p>
+            <p>Dus kunnen we stellen dat wanneer we de topnavigatieknop bedienen op schermen die kleiner zijn dan 600px,
+            we eerst dienen na te gaan of de selector <code>(".sidenavOpen")</code> van het off-Canvas menu al dan niet
+            de waarde <cite>Null</cite> draagt en indien dit niet het geval is het off-Canvas eerst dient te sluiten. Om
+            deze toestand vast te stellen maken we gebruik van een if-else statement. We zouden dan kunnen stellen dat
+            volgende code zou werken.</p>
+            <p><code>if (document.querySelector(".sidenavOpen")===null){
+            <br> console.log ('of-canvas is closed')
+            <br> };</code></p>
+            <p>We zorgen dat het off-canvas menu nu opengeklapt is en andersom maken we gebruik van de <cite>not
+            operator</cite> <code>!</code>. De code zou er dan als volgt uitzien:</p>
+            <p><code>if (document.querySelector(".sidenavOpen")!==null){
+            <br> console.log ('of-canvas is open')
+            <br> };</code></p>
+            <p>In Javascript staan de drie <cite>===</cite> gelijkheidstekens voor de gelijkheidheid van de waarde en het
+            type van de vergeleken elementen. Voor demonstratieredenen heb ik in dit voorbeeld de primitieve null waarde
+            gebruikt maar deze kan echter weggelaten worden. Zie codesnippet.</p>
+            <p>We hebben ondertussen kunnen achterhalen hoe we de toestand van het off-Canvas menu via JS kunnen
+            vaststellen maar onze code zal pas functioneren wanneer we een instrustie toevoegen en een else statement
+            toevoegen. De instructie nemen we over uit de code die we tijdens het eerste lesonderdeel gezien hebben en
+            voor de else statement doen we hetzelfde met het verschil dat we de functie <code>sidenav()</code> van het
+            tweede lesonderdeel hergebruiken door deze bovenaan de instructie toe te voegen onder het else statement.
+            Dit noemen we een functie oproepen. We voeren dit principe nu ook uit om de toestand van de topnavigatie
+            vast te stellen.</p>
+        </div>
+        <div class="container">
+          <div class="language">JavaScript</div>
+          <img src="img/null-waarde-console.jpg" alt="null waarde in console">
+          <img src="img/If-statement-console.jpg" alt="null waarde met if-statement achterhalen in console">
+          <div class="code-wrapper">
+            <pre><code tabindex="-1" id="language-javascript">                                  
+
+// function topnav() {
+  //   document.querySelector(".topnav").classList.toggle("topnavresponsive");
+  //  }
+  
+  function topnav() {
+
+    if (!document.querySelector(".sidenavOpen")) {
+
+      document.querySelector(".topnav").classList.toggle("topnavresponsive");
+
+    } else {
+
+      sidenav()
+      document.querySelector(".topnav").classList.toggle("topnavresponsive");
+    }
+  }
+
+//function sidenav() {
+  //  document.querySelector(".sidenav").classList.toggle("sidenavOpen");
+  //}
+
+  function sidenav() {
+
+    if (!document.querySelector(".topnavresponsive")) {
+      document.querySelector(".sidenav").classList.toggle("sidenavOpen");
+
+    } else {
+
+      topnav()
+      document.querySelector(".sidenav").classList.toggle("sidenavOpen");
+    }
+  }
+</code></pre>
+            <button>Copy</button>
+            <span class="copy-success">Code copied!</span>
+            <span class="copy-focus">JS code</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Functionaliteit optimaliseren</h2>
+        <div class="text">
+            <p>Tot nu hebben we voor het oproepen van de functies beroep gedaan op het onclick attribuut. Dit heeft echter
+            enkele beperkingen. Met de addEventListener functie kunnen we namelijk meerdere events aan één selector
+            toevoegen. Later komt dit van pas bij het inlogformulier. Merk dat het onclick attribuut in de html markup
+            van beide menu's is verwijderd.</p>
+        </div>
+        <div class="container">
+          <div class="language">HTML</div>
+          <div class="code-wrapper">
+            <pre><code tabindex="-1">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;nl&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+    &lt;title&gt;Gecombineerde sitenavigatie&lt;/title&gt;    
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;nav&gt;
+        &lt;div class=&quot;topnav&quot; id=&quot;myTopnav&quot;&gt;
+            &lt;a href=&quot;javascript:void(0);&quot; class=&quot;icon&quot;&gt;&amp;#9776;&lt;/a&gt;
+            &lt;a href=&quot;index.html&quot; class=&quot;active&quot;&gt;Start&lt;/a&gt;
+            &lt;a href=&quot;#&quot;&gt;HTML&lt;/a&gt;
+            &lt;a href=&quot;#&quot;&gt;CSS&lt;/a&gt;
+            &lt;a href=&quot;#&quot;&gt;JS&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;button class=&quot;btn&quot;&gt;&amp;#9776;&lt;/button&gt;
+
+        &lt;div id=&quot;mySidenav1&quot; class=&quot;sidenav&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;active&quot;&gt;Les 1: Topnavigatie&lt;/a&gt;
+            &lt;a href=&quot;#&quot;&gt;Les 2: Off-canvas menu&lt;/a&gt;
+            &lt;a href=&quot;gecombineerde sitenavigatie.html&quot; class=&quot;active&quot;&gt;Les 3: Gecombineerde sitenavigatie&lt;/a&gt;
+            &lt;a href=&quot;javascript:void(0)&quot; class=&quot;closebtn&quot;&gt;&amp;times;&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Lesonderdeel 3: Gecombineerde sitenavigatie&lt;/h1&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+        &lt;h2&gt;Gecombineerde sitenavigatie&lt;/h2&gt;
+    &lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+            <button>Copy</button>
+            <span class="copy-success">Code copied!</span>
+            <span class="copy-focus">Html code</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="text">
+            <p>Er zijn namelijk een tal van eventlisteners. In dit onderdeel gebruiken we de versie van het onclick event
+            die we tijdens de vorige lesonderdelen al gezien hebben. Het verschil is dat wanneer we de functie
+            addEventListener gebruiken we in de functie aangeven dat het om een 'click' event gaat i.p.v. een 'onclick'
+            event zoals bij de eerdere opstelling in de html markup. Beide verwijzen dus naar het zelfde event. De
+            functie addEventListener draagt dus 2 parameters. Het type event en een bijkomende functie dat uitgevoerd
+            moet worden wanneer het type event plaatsneemt.</p>
+            <p> Alvorens we de codesnippet in onze editor kopieriëren voeren we de volgende code in de console van de
+            developpers tools en klikken op het icoon van de topnavigatie dat verschijnt wanneer de schermgrootte >=
+            600px.</p>
+            <p><code>const topnavElement=document.querySelector(".icon")
+            <br> topnavElement.addEventListener('click',function(){
+            <br> console.log ('Dit is een eventlistener')
+            <br> });</code></p>
+            <p>In de codesnippet kan je merken dat de tweede parameter “function()” vervangen is door “()=>”. Beide
+            verwijzen naar een functie maar met het verschil dat de eerste notatie ietwat verouderd is maar
+            niettegenstaand toch nog in sommige gevallen erg nuttig kan zijn. Meer hierover bij het volgend
+            lesonderdeel.</p>
+            <p>We roepen binnen de eventlistener nu de eerder gemaakte functies op door deze toe te voegen. We herhalen
+            dit voor alle bedieningsknoppen.</p>
+        </div>
+        <div class="container">
+          <div class="code-wrapper">
+            <pre><code tabindex="-1">                                  
+
+const topnavElement=document.querySelector(".icon")
+// topnavElement.addEventListener('click',function(){ 
+// }); 
+  topnavElement.addEventListener('click',()=>{
+    topnav();  
+  });
+  
+function topnav() {
+  if (!document.querySelector(".sidenavOpen")) {
+    document.querySelector(".topnav").classList.toggle("topnavresponsive");
+  } else {
+    sidenav()
+    document.querySelector(".topnav").classList.toggle("topnavresponsive");
+  }
+}
+
+const sidenavElementOpen=document.querySelector(".btn")
+  sidenavElementOpen.addEventListener('click',()=>{
+    console.log(sidenavElementOpen)
+    sidenav();  
+  });
+
+const sidenavElementClose=document.querySelector(".closebtn")
+  sidenavElementClose.addEventListener('click',()=>{
+    sidenav();  
+  });
+
+function sidenav() {
+  if (!document.querySelector(".topnavresponsive")) {
+
+    document.querySelector(".sidenav").classList.toggle("sidenavOpen");
+    
+  } else {
+
+    topnav()
+    document.querySelector(".sidenav").classList.toggle("sidenavOpen")
+  }
+}
+</code></pre>
+            <button>Copy</button>
+            <span class="copy-success">Code copied!</span>
+            <span class="copy-focus">JS code</span>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <script>
+    hljs.highlightAll();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

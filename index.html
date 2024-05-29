@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <title>Front-end</title>
+</head>
+
+<body>
+    <nav>
+        <div class="topnav">
+            <a href="javascript:void(0);" class="icon">&#9776;</a>
+                
+                <a href="index.html" class="active">START</a>
+                <a href=#>HTML</a>
+                <a href=#>CSS</a>
+                <a href=#>JS</a>
+                <a href="javascript:void(0)" class="tabFrm" onclick="form()">LOG IN</a>
+
+                <form action="index.html">
+                    <ul class="form">
+                        <li><label for="name">Name</label>
+                            <input type="text" name="name" id="name" required><span>Enter name</span></li>
+                        <li><label for="email">Email</label>
+                            <input type="email" name="email" id="email" required><span>Enter email</span></li>
+                        <li><button class="submit" type="submit">Submit</button><span>Submit</span></li>
+                        <li><button class="closefrm" onclick="clsForm()">&times;</button></li>
+                    </ul>
+                </form>
+        </div>
+
+        <button class="btn">&#9776;</button>
+
+        <div class="sidenav">
+            <a href="topnavigatie.html" class="active">Les 1: Topnavigatie </a>
+            <a href="off-Canvas.html">Les 2: Off-canvas menu</a>
+            <a href="gecombineerde-sitenavigatie.html">Les 3: Gecombineerde sitenavigatie</a>
+            <a href="javascript:void(0)" class="closebtn">&times;</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Introductie</h1>
+    </header>
+    <main>
+
+        <article>
+            <section>
+                <h2>Topnavigatie</h2>
+                <div class="text">
+                    <p> Deze website heeft een tweeledig doel. Enerzijds is het deels een vervulling van mijn taak voor het vak front-end en anderzijds is het een uitgelezen opportuniteit om mijn leertraject te beschrijven en te structureren. Bijkomend is dat iedereen die interesse heeft in programmeren meer dan welkom isom de site te bezoeken. Voor de gebruiksvriendelijkheid heb ik met betrekking tot de inhoud van de site gekozen voor een gecombineerde sitenavigatie. Bovenaan en horizontaal uitgelijnd bevindt zich een responsief navigatiemenu met daarin een linkknop voor elk van de 3 globale thema's (nl, HTML,CSS en JS) die op deze site besproken zullen worden.
+                    </p>
+                </div>
+                <div class="container">
+                    <div class="language">HTML</div>
+                    <img src="img/desktopNav.jpg" alt="afbeelding van de desktop weergave van het themamenu">
+                </div>
+            </section>
+            <section>
+                <h2>Responsiviteit</h2>
+                <div class="text">
+                    <p> De responsieve configuratie van het thema menu maakt de toegang van dit menu op smartphones en tablets meer gebruiksvriendelijk door een gelijkaardig hamburger icoontje dat rechts in de bovenhoek van de horizontale balk verschijnt.
+                    </p>
+                </div>
+                <div class="container">
+                    <div class="language">HTML</div>
+                    <img src="img/mobileNav.jpg" alt="afbeelding van de mobiele weergave van het themamenu">
+                </div>
+            </section>
+
+            <section>
+                <h2>Of-Canvas menu</h2>
+                    <div class="text">
+                <p> Aangezien de thema’s uit vele rubrieken bestaan, leek het me praktisch om deze per onderdeel in een of-canvas menu onder te verdelen. Dit verticaal uitgelijnd menu kan geraadpleegd worden door links bovenaan op het hamburger icoon te klikken. Deze bevindt zich net onder de horizontale balk van het thema menu. 
+                </p>
+            </div>
+                <div class="container">
+                    <div class="language">HTML</div>
+                    <img src="img/sideNavButton.jpg" alt="afeelding van de off-canvas menuknop">
+                </div>
+            </section>
+
+            <section>
+                <h2>Aan de slag</h2>
+                <div class="text">   
+                    <p> Voor absolute beginnelingen zoals mezelf vormt het vergaren van vakkennis vaak een uitdaging. Dit komt vooral door de confrontatie met overweldigende vaktermen, terminologieën en de daarbij horende complexe toepassingen. Deze site doet daarom een inspanning om de leerstof vanuit een vogelperspectief te benaderen d.m.v. praktijk gerichte lesonderdelen die geraadpleegd kunnen worden via de off-canvas menuknop dat zich onder de startknop bevindt.</p>
+                    <p>Merk wanneer u zich in het themamenu bevindt u via het off-canvas menu de relevante themaonderdelen kan raadplegen. Dit is om zo goed mogelijk de focus op het lesonderdeel te houden en om zo veel mogelijk verwarring als gevolg van het navigeren te vermijden. Dit al beperkt naar mijn mening de mogelijkheid om overweldigd te worden door leerstof dat niet relevant is voor het leerstadium waarin de gebruiker zich bevindt. Uiteraard zal er indien nodig gebruik gemaakt worden van interne linken naar andere lesonderdelen of themaonderdelen. Wanneer deze dan niet voorzien zijn kan men altijd via de homepagina terug in het off-canvas menu om andere lesonderdelen te bekijken of het themamenu om relevante themaonderdelen te raadplegen.</p>
+                    <p>De thema onderdelen blijven op elke pagina toegankelijk om gerichter informatie over een onderwerp op te zoeken dat aan bod komt in het lesonderdeel waarin men zich bevindt. De themaonderdelen of lesonderdelen zijn dus terug te vinden in het of-canvas navigatiemenu. Wanneer u de bedieningsknop van dit menu aanklikt zal de marge van de pagina rechts inspringen. Dit om te vermijden dat de inhoud van de pagina bedekt wordt. Merk ook in de horizontale zwarte balk van het thema menu, dat het themablokje grijs oplicht om het thema aan te geven waarin de gebruiker zich bevindt en ook wanneer de gebruiker het themablokje met de muiscursor benaderd (Hover). Links bovenaan vindt u net zoals op elk van de hierboven besproken pagina's de bedieningsknop van de off-canvas navigatie. In de lesonderdelen wordt de lay-out van deze site telkens ter illustratie genomen.</p>
+                </div>
+                <div class="container">
+                    <div class="language">HTML</div>
+                    <img src="img/sideNavOpen.jpg" alt="afbeelding van van het off-canvas menu">
+                </div>
+            </section>    
+        </article>
+    </main>
+
+    <script src="script.js"></script>
+</body>

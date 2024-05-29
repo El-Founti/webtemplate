@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
+  <!-- https://www.freewebtoolkit.com/how-to-display-code-snippets-in-html-with-color -->
+  <title>Topnavigatie</title>
+</head>
+
+<body>
+  <nav>
+    <div class="topnav">
+      <a href="javascript:void(0);" class="icon">&#9776;</a>
+      <a href="index.html" class="active">Start</a>
+      <a href=#>HTML</a>
+      <a href=#>CSS</a>
+      <a href=#>JS</a>
+    </div>
+
+    <button class="btn">&#9776;</button>
+
+    <div class="sidenav">
+      <a href="topnavigatie.html" class="active">Les 1:Topnavigatie</a>
+      <a href="off-Canvas.html">Les 2: Off-canvas menu</a>
+      <a href="gecombineerde-sitenavigatie.html">Les 3: Gecombineerde sitenavigatie</a>
+      <a href="javascript:void(0)" class="closebtn">&times;</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Lesonderdeel 1:Topnavigatie</h1>
+  </header>
+  <main>
+
+
+    <article>
+      <section>
+        <h2>Navigatiemenu</h2>
+        <div class="text">
+          <p>De weergave van fig.1 verschijnt in de browser wanneer u onderstaande code kopieert en in de editor plakt. De code is samengesteld uit vier <code>&lt;a href;&quot;&gt;&lt;/a&gt;</code> inline elementen voor het aantalmenu items en aangezien we d.m.v. een functie in JS (JavaScript) de toestand van het menu willen manipuleren voegen we nog één a href element <code>&lt;a href=&quot;javascript:void(0);&quot;</code>voor de bedieningsknop van het menu dat verschijnt wanneer de webpagina op kleinere toestellen wordt weergegeven. Het menu past zich dan d.m.v. een instructie in CSS en een functie in JS automatisch aan de viewport van het toestel waarop de site bekeken wordt.</p>
+          <p>Hierbij voegen we nog een class attribuut en een onclick attribuut toe. <code>class=&quot;icon&quot; onclick=&quot;topnav()&quot;&gt;&lt;i class=&quot;fafa-bars&quot;&gt;&lt;/i&gt;&lt;/a&gt;</code> Verder nog een genesteld idiomatisch textelement <code>&lt;i&gt;</code> dat naar het icoon van de bedieningsknop verwijst en dat via een externe bibliotheekgekoppeld wordt.<code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/fontawesome.min.css&quot;&gt;</code>.Deze vindt je samen met het meta tag voor de viewport onder de head tag terug. </p>
+          <p>De hierboven genoemdecodeblok wordt omsloten door een<code>&lt;div&gt;&lt;/div&gt;</code>tag en bevindt zich onder de<code>&lt;nav&gt;&lt;nav&gt;</code>tag. Merk dat de<code>&lt;ahref=&quot;&quot;&gt;&lt;/a&gt;</code>inline elementen zich standaard horizontaal naast elkaar positioneren en het eerste element of <cite>“first-child”</cite> zich in actieve toestand bevindt. Voor het linken van andere webpagina’s dienen de hashtags nog wel vervangen te worden door webpagina's. De hashtag belet dat we een foutmelding genereren bij het klikken wanneer de webpagina's nog onbestaand zijn. De<code>&quot;javascript:void(0)&quot;</code>invulling geeft aan dat deze geen link is maar een verwijzing naar een functie in javascript. Beide verhinderen dus in afwachting van het vervoledigen van onze webpagina een foutmelding bij het per ongeluk aanklikken.
+          </p>
+        </div>
+        <div class="container">
+          <div class="language" id="language-copy">HTML</div>
+          <img src="img/topnavMarkUp.jpg" alt="HTML Mark up topnavigatie">
+          <div class="code-wrapper">
+            <pre><code tabindex="-1" id="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;nl&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=
+&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/
+4.7.0/css/font-awesome.min.css&quot;&gt;
+                    
+&lt;title&gt;Topnavigatie&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;nav&gt;
+            
+    &lt;div class=&quot;topnav&quot; id=&quot;myTopnav&quot;&gt;
+      &lt;a href=&quot;javascript:void(0);&quot; class=&quot;icon&quot; onclick=&quot;topnav()&quot;&gt;
+      &lt;i class=&quot;fa fa-bars&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+      &lt;a href=&quot;index.html&quot;class=&quot;active&quot;&gt;Home&lt;/a&gt;
+      &lt;a href=&quot;#&quot;&gt;HTML&lt;/a&gt;
+      &lt;a href=&quot;#&quot;&gt;CSS&lt;/a&gt;
+      &lt;a href=&quot;#&quot;&gt;JS&lt;/a&gt;    
+    &lt;/div&gt;
+
+    &lt;nav&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+            <button>Copy</button>
+            <span class="copy-success">Code copied</span>
+            <span class="copy-focus">Html code</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Opmaak</h2>
+        <div class="text">
+          <p>Voor het verfraaien, het positioneren en het toevoegen van bepaalde functionaliteiten gebruiken we CSS. We geven de menubalk een zwarte achtergrond en verbergen scrollbar voor elementen die eventueel uit de marge van het blokelement vallen. Aangezien we het blokelement in HTML een <cite>“class”</cite> attribuut hebben gegeven, kunnen we deze in CSS selecteren d.m.v. de volgende code; <code>.topnav{}</code>. Dit noemen we een selector. Padding creëert ruimte rond de elementen en de onderstreping van de anchor tag elementen<code>&lt;ahref=&quot;&quot;&gt;&lt;/a&gt;</code> worden verwijderd door de functie <code>tekst-decoration:none;</code>.</p>
+          <p>Om het navigatiemenu gebruiksvriendelijker te maken voegen we nog een hover effect toe aan de elementen door de pseudo-class <code>topnav a:hover{}</code> aan te brengen. Om een indicatie te geven van waar de gebruiker zich bevindt op de webpagina kleuren we het menu item dat actief is <code>.topnav a.active {}</code>. Door de <code>.topnav a:not(:first-child, :nth-child(2)) {}</code>selector op <code>display:none;</code> in te stellen zullen met uitzondering van de startknop en het icoon de overige elementen voorlopig niet op het beeldscherm verschijnen.</p>
+          <p>Voor de <code>&lt;a href=&quot;&quot;&gt;&lt;/a&gt;</code> inline elementen in het blokelement te positioneren of uit te lijnen heb ik in dit geval gekozen voor de Float functie. Deze hadden ook met Flexbox of Grid gepositioneerd kunnen worden, maar later meer hierover. Door de selector<code>.topnav a{}</code>aan te brengen kunnen we d.m.v. <code>float:right;</code> het eerste element of <cite>“first-child”</cite> binnen het blokelement rechts uitlijnen. Voor de weergave van deze elementen heb ik voor het eerste element <code>display:block;</code> en het tweede element of <cite>“nth-child(2)”</cite> <code>display:inline-block;</code> aangegeven. Dit zal ervoor zorgen dat het element niet het volledig <cite>“div”</cite> block element inpalmt. Dit kan en hoeft niet voor het eerste element aangezien ik deze met de float functie uiterst rechts positioneer.(Voor demonstratieredenen heb ik gebruik gemaakt van de child selectors maar deze hadden evengoed met het class attribuut geselecteerd kunnen worden. U vindt hier meer informatie over bij de rubriek over selectoren onder de CSS themaknop).</p>
+          <p>De verborgen elementen dienen nu d.m.v. van een @media regel weer gegeven te worden op schermen die groter zijn dan 600px. Met de <code>@media screen and (min-width: 600px) {}</code> regel kunnen we verschillende stijlen van layouts op verschillende media types en schermen toepassen. Dit door een bepaalde opmaak aan één of meerdere selectoren toe te kennen.</p>
+          <p>Onder deze regel selecteren we de elementen met uitzondering van het eerste element (menuknop) <code>.topnav a:not(:first-child) {display: block;}</code> en positioneren deze links <code>float: left;</code> aansluitend aan het tweede element (Home). In deze configuratie willen we de menuknop met het icoon verbergen aangezien alle elementen zichtbaar en toegankelijk zijn <code>.topnav a:first-child {display: none;}</code>. Om een onderscheid te maken in de toestand van het beeldscherm voegen we nog een class toe aan de selector van het menu <code>.topnavresponsive{}</code>.</p>
+          <p>Onder deze selector positioneren we de elementen met uitzondering van het eerste element en tweede element <code>.topnavresponsive a:not(:first-child, :nth-child(2)) {display: block;}</code> links onder het tweede element (Home). Zo ook Hiermee gaan we in de volgende stap nog aan de slag om het navigatiemenu toegankelijk en responsief te maken met behulp van JS. Dit laatste is een referentie voor javascript om de huidige toestand van het menu te herkennen en om het class attribuut in HTML aan te passen via het onclick event <code>"topnav()"</code>. Met behulp van deze functie kunnen we de menuonderdelen zichtbaar maken wanneer we op het icoon klikken.</p>
+          <p>Om ons menu nu ook nog aan te passen aan heel grote schermen kunnen we met behulp van de clamp functie ook onze lettertypes aaspassen. We selecteren de html tag en voegen volgende instructie helemaal vanboven toe aan het CSS bestand.</p>
+          <p><code>html {
+          <br> font-size: clamp(.8rem, 1.4vw, 2.4rem);
+          <br> line-height: 1.6;
+          <br> }</code></p>
+          <p>Later meer hierover.</p>
+        </div>
+
+        <div class="container">
+          <div class="language">CSS</div>
+          <img src="img/mobileNav.jpg" alt="afbeelding van de topnavigatie voor mobiele toestellen met CSS Opmaak ">
+          <img src="img/desktopNav.jpg" alt="afbeelding van de topnavigatie voor desktop versie met CSS Opmaak ">
+          <div class="code-wrapper">
+            <pre><code tabindex="-1" id="language-css">                    
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+                              
+.topnav a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 16px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: #333;
+}
+                              
+.topnav a.active {
+  background-color: #ddd;
+  color: #333;
+}
+                              
+.topnav a:not(:first-child, :nth-child(2)) {
+  display: none;
+}
+                              
+.topnav a:first-child {
+  float: right;
+  display: block;
+}
+
+.topnav a:nth-child(2) {
+  display: inline-block;
+}
+                                                                    
+@media screen and (min-width: 600px) {
+  .topnav a:not(:first-child) {
+    display: block;
+    float: left;
+    text-align: center;
+    text-decoration: none;
+  }
+                              
+  .topnav a:first-child {
+    display: none;
+  }                              
+}
+
+.topnavresponsive a:not(:first-child, :nth-child(2)) {
+  display: block;
+  color: #f2f2f2;
+}
+</code></pre>
+            <button>Copy</button>
+            <span class="copy-success">Code copied!</span>
+            <span class="copy-focus">CSS code</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Functionaliteit</h2>
+        <div class="text">
+          <p>Wanneer we de developper tools erbij nemen merken we dat het menu van configuratie veranderd dankzij de opmaak die we hierboven in CSS hebben opgesteld. Echter in de mobiele versie hebben we nog geen toegang tot de verborgen onderdelen van het menu wanneer we op het icoon klikken. Aangezien we in Css een bijkomende classname <code>.topnavresponsive{}</code> toegevoegd hebben waarbij we het element zichtbaar maken dienen we het class attribuut <code>.topnav{}</code>in html met JS te manipuleren.</p>
+          <p>Vooreerst selecteren we in de console van de developper tools dit attribuut met behulp van volgende code:<code>document.querySelector(".topnav")</code>. De console zal dan aangeven waar dit attribuut zich bevindt wanneer men op enter klikt. Uiterst rechts van de regel bevindt zich een vizier waarmee we het element of de node kunnen selecteren. Dit vizier leidt ons dus bij het aanklikken hiervan automatisch naar het element in de html markup dat zich onder de inspector tab bevindt.</p>
+          <p>We keren terug naar de console en breiden de code verder uit met <code>document.querySelector(".topnav").classList.toggle("topnavresponsive");</code> en drukken op enter. De console geeft dan "true" aan en het menu wordt nu wel toegankelijk. Onder de inspector tab in de html mark-up onder het nav tag merken dat het menu nu een classattribuut draagt met de naam "topnav topnavresponsive".</p>
+          <p>Indien we nu de viewport van ons scherm verkleinen tot minder dan 600px zal je merken dat het menu nu open en toegankelijk is. De toggle methode schakelt dus standaard conditioneel over van true naar false en bespaard ons in dit geval een if-statement. Hierdoor kan de laatste CSS regel uitgevoerd en ongedaan gemaakt worden met één coderegel. De aanpassing in de console is niet permanent en dient de JS coderegel nog ingevoerd te worden in het JS bestand onder een functie <code>function topnav() {}</code>. Zie codesnippet.</p>
+        </div>
+        <div class="container">
+          <div class="language">JavaScript</div>
+          <img src="img/toggleDevTools.jpg" alt="afbeelding van .classList.toggle in developper tools">
+          <div class="code-wrapper">
+            <pre><code tabindex="-1" id="language-javascript">                    
+function topnav() {
+  document.querySelector(".topnav").classList.toggle("topnavresponsive");
+}
+</code></pre>
+            <button>Copy</button>
+            <span class="copy-success">Code copied!</span>
+            <span class="copy-focus">JS code</span>
+
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <script>
+    hljs.highlightAll();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
+  <!-- https://www.freewebtoolkit.com/how-to-display-code-snippets-in-html-with-color -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <title>Off-canvas menu</title>
+</head>
+
+<body>
+  <nav>
+    <div class="topnav">
+      <a href="javascript:void(0);" class="icon">
+        &#9776;</a>
+      <a href="index.html" class="active">Start</a>
+      <a href=#>HTML</a>
+      <a href=#>CSS</a>
+      <a href=#>JS</a>
+    </div>
+
+    <button class="btn">&#9776;</button>
+
+    <div class="sidenav">
+      <a href="topnavigatie.html" class="active">Les 1: Topnavigatie</a>
+      <a href="off-Canvas.html">Les 2: Off-canvas menu</a>
+      <a href="gecombineerde-sitenavigatie.html">Les 3: Gecombineerde sitenavigatie</a>
+      <a href="javascript:void(0)" class="closebtn">&times;</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Lesonderdeel 2: Off-canvas menu</h1>
+  </header>
+  <main>
+
+
+    <article>
+      <section>
+        <h2>Off-Canvas menu</h2>
+        <div class="text">
+            <p>Op de afbeelding is net zoals in de code is aangegeven, een knop aanwezig <code>&lt;button
+            class=&quot;btn&quot; onclick=&quot;sidenav()&quot;&gt;&amp;#9776;&lt;/button&gt;</code> met daaronder drie
+            horizontaal gepositioneerde <code>&lt;a href=&quot;&quot;&gt;&lt;/a&gt;</code> elementen en waarvan we 1
+            element <code>&lt;a href=&quot;javascript:void(0)&quot; class=&quot;closebtn&quot;
+            onclick=&quot;sidenav()&quot;&gt;&amp;times;&lt;/a&gt;</code> gaan gebruiken voor het menu te sluiten.</p>
+            <p>Merk dat deze sluitknop onderaan staat. Dit doen we bewust om het navigeren met de tabtoets te
+            faciliteren. Logischerwijs willen we de sluitknop als laatste aanduiden maar later meer hierover. Zowel de
+            knop als het laatste element is voorzien van een onclick attribuut waarmee we het menu met behulp van JS
+            (JavaScript) kunnen bedienen.</p>
+            <p>Verder heb ik anders als bij het vorig lesonderdeel voor de iconen gebruik gemaakt van de html 5
+            entiteitsreferenties <code>&amp;times;</code> en <code>&amp;#9776;</code>. Dit is een soort bibliotheek
+            waarin symbolen en speciale charachters opgenomen zijn. Voor het linken van andere webpagina's dienen de
+            hashtags nog wel vervangen te worden door reeële webpagina's. De hashtag belet dat we een foutmelding
+            genereren bij het klikken wanneer de webpagina's nog onbestaand zijn. De
+            <code>&quot;javascript:void(0)&quot;</code>invulling geeft aan dat deze geen link is maar een verwijzing
+            naar een functie in javascript. Beide verhinderen dus in afwachting van het vervoledigen van onze webpagina
+            een foutmelding bij het per ongeluk aanklikken.</p>
+        </div>
+        <div class="container">
+          <div class="language">HTML</div>
+          <img src="img/sidenavMarkUp.jpg" alt="Mark up topnavigatie">
+          <div class="code-wrapper">
+            <pre><code tabindex="-1" id="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;nl&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;          
+&lt;title&gt;Topnavigatie&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;				
+  &lt;nav&gt;
+    &lt;button class=&quot;btn&quot; onclick=&quot;sidenav()&quot;&gt;&amp;#9776;&lt;/button&gt;
+    &lt;div id=&quot;mySidenav1&quot; class=&quot;sidenav&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;active&quot;&gt;Les 1: Topnavigatie&lt;/a&gt;
+      &lt;a href=&quot;#&quot;&gt;Les 2: Off-canvas menu&lt;/a&gt;
+      &lt;a href=&quot;javascript:void(0)&quot; class=&quot;closebtn&quot; onclick=&quot;sidenav()&quot;&gt;&amp;times;&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+            <button>Copy</button>
+            <span class="copy-success">Code copied!</span>
+            <span class="copy-focus">Html code</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Opmaak</h2>
+        <div class="text">
+            <p>Op de afbeelding is net zoals in de code een bedieningsknop te zien <code>&lt;button class=&quot;btn&quot;
+            onclick=&quot;sidenav()&quot;&gt;&amp;#9776;&lt;/button&gt;</code> met daaronder drie horizontaal
+            gepositioneerde <code>&lt;a href=&quot;&quot;&gt;&lt;/a&gt;</code> anchor tag elementen waarvan we 1 element
+            gaan gebruiken voor het menu terug in te klappen <code>&lt;a href=&quot;javascript:void(0)&quot;
+            class=&quot;closebtn&quot; onclick=&quot;sidenav()&quot;&gt;&amp;times;&lt;/a&gt;</code>. Uiteraard
+            beginnen we met deze elementen onder elkaar te positioneren door onder de selector
+            <code>display:block;</code> aan te geven en om de onderstreping te werwijderen gebruiken we wederom
+            <code>textdecoration:none;</code>. Padding zorgt voor de nodige ruimte rond de text.</p>
+            <p>Merk dat het sluiticoon onderaan staat. Men zou kunnen stellen dat we deze bovenaan kunnen zetten in de
+            html markup om zodoende de positie van dit element te veranderen. Het nadeel is echter dat wanneer we met de
+            tabtoets in het menu willen navigeren deze dan als eerste element wordt opgelicht. Logischerwijs willen we
+            de sluitknop als laatste aanduiden.</p>
+            <p>Om de sluitknop te positioneren stellen we nog een bovenmarge in voor het eerste element en kunnen dan met
+            behulp van <code>position:absolute</code> de sluitknop rechts bovenaan plaatsen. Wanneer we een
+            achtergrondkleur toevoegen aan het menu zal men merken dat ondanks we de hoogte op 100% hebben ingesteld, de
+            elementen door de eigenschappen van het boxmodel die we voorheen hebben toegekend
+            <code>display:block;</code> over heel de breedte van de pagina loopt. Dit kunnen we verhelpen door het
+            element de <code>position:fixed;</code> eigenschap te geven. hierbij geven we in dit geval ook een positie
+            aan t.o.v de webpagina bovenaan <code>top: 0;</code> en links <code>left: 0;</code>.Aangezien het menu zowel
+            verschijnt als verdwijnt vanuit de linkermarge van de pagina, voeren we alvast een vertraagde transitie
+            <code>transition: 0.3s;</code> door.</p>
+            <p>Voor de functionaliteit en de bediening van het menu dienen we het menu <code>visibility: hidden;</code> en
+            de overflow van de inhoud <code>overflow-x: hidden;</code>te verbergen. Daarna stellen we nog een breedte
+            voor het menu in op 0<code>width: 0;</code> voor de gesloten toestand. We voegen nog een een class toe aan
+            de selector van het menu voor de open toestand en deze noemen we <code>.sidenavOpen {}</code>. We stellen de
+            breedte parameter in op <code>width: clamp(200px, 20%, 600px);</code>.</p>
+            <p>De clamp functie is een methode om o.a de lettergroote en andere elementen aan te passen aan de viewpoort
+            of schermgrootte. Deze neemt een minimumwaarde, een voorkeurswaarde (dat in dit geval 20% van de viewport
+            bedraagt) en een maximumwaarde op als parameter. Dit had echter ook met <code>width: fit-content;</code>
+            methode gelukt maar dan was een vertraagde transitie of overgang bij het openen en sluiten van het menu niet
+            mogelijk. Ook zal deze functie later nog bijdragen om ook onze lettergrootte aan te passen aan kleine en
+            grote schermen.</p>
+            <p>We stellen verder ook nog de visibiliteit van het menu in en tot slot voegen we nog opmaak toe aan de
+            bedieningsknop van het menu en voegen hierbij eveneens de clamp functie toe. Het menu zal dan met behulp van
+            een JS functie verschijnen wanneer we op de knop klikken en sluiten wanneer we op de sluitknop klikken. Merk
+            dat aangezien we een symbool en een speciaal character gebruiken voor beide bedieningsknopppen de
+            eigenschappen van de clamp functie aangepast zijn op basis van de lettertype met een minimumwaarde van 2
+            rem, een voorkeurswaarde dat 1% van de viewport breedte bedraagt en een maximumwaarde van 2.5 rem.
+            <code>font-size: clamp(2rem, 1vw, 2.4rem);</code>.</p>
+        </div>
+        <div class="container">
+          <div class="language">CSS</div>
+          <img src="img/sideNavButton.jpg" alt="off-Canvas menu">
+          <img src="img/sideNavOpen.jpg" alt="off-Canvas menu">
+          <div class="code-wrapper">
+            <pre><code tabindex="-1" id="language-css">                    
+.sidenav a {
+  display: block;
+  text-decoration: none;
+  padding: .2em .5em;
+  color: #818181; 
+}
+
+.sidenav a:first-child {
+  margin-top: 3.5em;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: clamp(2rem, 1vw, 2.4rem);
+}
+
+.sidenav {
+  height: 100%; 
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  transition: 0.6s;
+  overflow-x: hidden;
+  visibility: hidden;  
+}
+
+.sidenavOpen {
+  width: clamp(250px, 20%, 600px); 
+  transition: 0.6s;
+  visibility: visible;
+}
+
+.btn:focus {
+  border: 2px solid #ddd;
+}
+
+.btn:hover {
+  border: 2px solid #ddd;
+}
+
+.btn {
+  background-color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 5px;
+  font-size: clamp(2rem, 1vw, 2.4rem);
+}
+</code></pre>
+            <button>Copy</button>
+            <span class="copy-success">Code copied!</span>
+            <span class="copy-focus">CSS code</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Functionaliteit</h2>
+        <div class="text">
+            <p>Wanneer we de developper tools erbij nemen merken we dat het menu van configuratie veranderd bij schermen
+            onder de 600px. Echter in de mobiele versie hebben we nog geen toegang tot de verborgen onderdelen van het
+            menu wanneer we op het icoon klikken. Aangezien we in Css een bijkomende classname
+            <code>.sidenavOpen{}</code>. hebben toegevoegd waarbij we het menu zichtbaar maken dienen we het class
+            attribuut <code>.sidenavOpen{}</code>in html met JS te manipuleren.</p>
+            <p>Vooreerst selecteren we in de console van de developper tools het menu attribuut met behulp van volgende
+            code:<code>document.querySelector(".sidenav")</code>. De console zal dan aangeven waar dit attribuut zich
+            bevindt wanneer men op enter klikt. Uiterst rechts van deze regel bevindt zich een vizier waarmee we het
+            element of de node kunnen selecteren. Deze leidt ons dus bij het aanklikken hiervan automatisch naar het
+            element in de html markup dat zich onder de inspector tab bevindt.</p>
+            <p>We keren terug naar de console en breiden de code verder uit met
+            <code>document.querySelector(".sidenav").classList.toggle("sidenavOpen");</code> en drukken op enter. De
+            console geeft "true" aan en het menu wordt nu toegankelijk. In de inspector tab bij de html mark-up onder
+            het nav tag merken we nu dat het menu een classattribuut draagt met de naam "sidenav sidenavOpen". De
+            aanpassing in de console is niet permanent en dient de JS coderegel nog ingevoerd te worden in het JS
+            bestand onder een functie <code>function sidenavOpen() {}</code>. Zie codesnippet.</p>
+        </div>
+        <div class="container">
+          <div class="language" id="language-copy">JavaScript</div>
+          <img src="img/toggleDevTools.jpg" alt="classList.toggle in developper tools">
+          <div class="code-wrapper">
+            <pre><code tabindex="-1" id="language-javascript">                                  
+function sidenav() {
+  document.querySelector(".sidenav").classList.toggle("sidenavOpen");
+}
+</code></pre>
+            <button>Copy</button>
+            <span class="copy-success">Code copied!</span>
+            <span class="copy-focus">JS code</span>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <script>
+    hljs.highlightAll();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
